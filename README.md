@@ -32,8 +32,5 @@ git clone https://github.com/DarkstarProject/darkstar.git
 ```
 
 The compile.sh script will compile darkstar from within a temporary Docker container.  Once it is done compiling, the result will remain in /home/user/workdir/darkstar.
-The rest of the compile.sh script will stage the build output in the /home/user/workdir/output directory and tar that into darkstar.tar.bz2
-darkstar.tar.bz2 used to install darkstar on a ubuntu 14.04 box, and the output folder can be used as a developper test environment.
-
-To develop, you simply have to point your favorite IDE to /home/user/workdir/darkstar, and whenever you need to build, launch compile.sh (Or a stripped down version of it) as often as you want.  The first build will take a long time(Docker will download images and such), but once things gets cached, the build will be much faster.
+To develop, you simply have to point your favorite IDE to /home/user/workdir/darkstar, and whenever you need to build, launch compile.sh .  Note that the first time Docker will need to pull lots of stuff and this will take time.  Once the first compile is done, the next ones will be much faster.
 
