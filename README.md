@@ -28,9 +28,16 @@ sudo docker info
 cd /home/user/workdir
 mkdir output
 git clone https://github.com/DarkstarProject/darkstar.git
-./compile.sh /home/user/workdir/darkstar /home/user/workdir/output
+./compile.sh /home/user/workdir/darkstar
 ```
 
 The compile.sh script will compile darkstar from within a temporary Docker container.  Once it is done compiling, the result will remain in /home/user/workdir/darkstar.
 To develop, you simply have to point your favorite IDE to /home/user/workdir/darkstar, and whenever you need to build, launch compile.sh .  Note that the first time Docker will need to pull lots of stuff and this will take time.  Once the first compile is done, the next ones will be much faster.
 
+* Produce a build using the darkstar-dev Docker image
+```
+cd /home/user/workdir
+mkdir output
+git clone https://github.com/DarkstarProject/darkstar.git
+./build.sh /home/user/workdir/darkstar /home/user/workdir/output
+```
